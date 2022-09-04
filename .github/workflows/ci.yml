@@ -1,0 +1,55 @@
+name: SPA CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  setup:
+
+    runs-on: ubuntu-latest
+       
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js 16
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: 'yarn'
+    - run: |
+            yarn install
+            yarn run lint
+            yarn test
+            yarn build
+
+
+  semantic-release:
+    runs-on: ubuntu-latest
+    needs: [setup]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
+      - run: npm set-script prepare ""
+      - run: yarn install
+      - run: yarn run build
+      - run: cp "package.json" "./build/package.json"
+      - run: zip -r build.zip build
+      - run: yarn semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: cp "./build/package.json" "package.json"
+      - run: npm set-script prepare "husky install"
+      - run: |
+          cp "./build/package.json" "package.json"
+          git config user.name "${{ github.event.pusher.name }}"
+          git config user.email "${{ github.event.pusher.email }}"
+          git add package.json
+          git commit -m "chore(release): package.json update [skip ci]"
+          git push origin main
