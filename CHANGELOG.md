@@ -1,3 +1,10 @@
+# 1.0.0 (2022-09-05)
+
+
+### Bug Fixes
+
+* **no-jira:** changed project owner nickname ([dfe8a33](https://github.com/yuraBezh/crypto-trade-30082022/commit/dfe8a33cb2e10e9ae6fa9b253a2bfcbbdc889ef6))
+
 # [1.1.0](https://github.com/rbelmega/crypto-trada-30082022/compare/v1.0.1...v1.1.0) (2022-08-30)
 
 
