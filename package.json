@@ -1,6 +1,6 @@
 {
   "name": "@yuraBezh/crypto-trade-30082022",
-  "version": "1.1.0",
+  "version": "1.0.1",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
