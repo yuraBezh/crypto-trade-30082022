@@ -14,6 +14,7 @@ function App() {
 			mode: 'dark',
 		},
 	});
+
 	return (
 		<StyledEngineProvider injectFirst>
 			<ThemeProvider theme={darkTheme}>
