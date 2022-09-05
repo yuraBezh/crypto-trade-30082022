@@ -6,6 +6,19 @@
 * **no-jira:** changed project owner nickname ([dfe8a33](https://github.com/yuraBezh/crypto-trade-30082022/commit/dfe8a33cb2e10e9ae6fa9b253a2bfcbbdc889ef6))
 * **no-jira:** updated version ([ebc0d86](https://github.com/yuraBezh/crypto-trade-30082022/commit/ebc0d86ebd78747e526279bfaaf48e1d8a4fb97d))
 
+
+### Features
+
+* **no-jira:** an empty commit to trigger github action ([4be7e67](https://github.com/yuraBezh/crypto-trade-30082022/commit/4be7e67ab0c0f3ec34b29579ceb500c5c2119daa))
+
+# 1.0.0 (2022-09-05)
+
+
+### Bug Fixes
+
+* **no-jira:** changed project owner nickname ([dfe8a33](https://github.com/yuraBezh/crypto-trade-30082022/commit/dfe8a33cb2e10e9ae6fa9b253a2bfcbbdc889ef6))
+* **no-jira:** updated version ([ebc0d86](https://github.com/yuraBezh/crypto-trade-30082022/commit/ebc0d86ebd78747e526279bfaaf48e1d8a4fb97d))
+
 # 1.0.0 (2022-09-05)
 
 
